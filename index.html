@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Great DivineLove Nursery, Primary & Secondary School</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+font-family:Arial,sans-serif;
+color:#10233e;
+line-height:1.6;
+background:white
+}
+header{
+background:#082b68;
+color:white;
+position:sticky;
+top:0;
+z-index:1000
+}
+.top{
+background:#061d49;
+padding:8px 5%;
+font-size:13px;
+text-align:center
+}
+nav{
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 5%;
+max-width:1300px;
+margin:auto
+}
+.logo-text{
+font-size:18px;
+font-weight:bold
+}
+.logo-text span{
+color:#00a9e8
+}
+nav a{
+color:white;
+text-decoration:none;
+margin-left:16px;
+font-size:14px
+}
+nav a:hover{color:#00c4ff}
+.hero{
+background:linear-gradient(135deg,#eaf9ff,#fff,#eaf2ff);
+padding:90px 7%;
+text-align:center
+}
+.hero h1{
+font-size:clamp(38px,7vw,70px);
+color:#082b68;
+line-height:1.1;
+margin-bottom:20px
+}
+.hero h1 span{color:#0b55b7}
+.hero p{
+max-width:750px;
+margin:auto;
+font-size:18px;
+color:#617089
+}
+.buttons{margin-top:30px}
+.btn{
+display:inline-block;
+padding:14px 24px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin:5px
+}
+.blue{background:#0b55b7;color:white}
+.white{background:white;color:#082b68;border:1px solid #aac9df}
+section{
+padding:75px 7%;
+max-width:1300px;
+margin:auto
+}
+.alt{background:#eef8ff;max-width:none}
+.title{text-align:center;margin-bottom:40px}
+.title small{
+color:#0b55b7;
+font-weight:bold;
+letter-spacing:2px
+}
+.title h2{
+font-size:40px;
+color:#082b68;
+margin-top:8px
+}
+.title p{color:#617089}
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px;
+max-width:1100px;
+margin:auto
+}
+.card{
+background:white;
+padding:30px;
+border-radius:18px;
+box-shadow:0 8px 25px #082b6815;
+border:1px solid #d9e8f5
+}
+.card h3{
+color:#082b68;
+margin:12px 0
+}
+.card p{color:#617089}
+.icon{font-size:42px}
+.about{
+max-width:900px;
+text-align:center;
+margin:auto
+}
+.about p{
+color:#617089;
+margin:12px
+}
+.level{
+text-align:center;
+padding:35px
+}
+.level h3{font-size:25px}
+.level a{
+color:#0b55b7;
+font-weight:bold;
+text-decoration:none
+}
+.admission{
+background:linear-gradient(135deg,#082b68,#0b55b7);
+color:white;
+border-radius:22px;
+padding:45px;
+max-width:1100px;
+margin:auto
+}
+.admission h2{font-size:38px;margin-bottom:10px}
+.admission p{max-width:700px}
+.payment{
+background:white;
+padding:35px;
+border-radius:18px;
+max-width:900px;
+margin:auto;
+text-align:center;
+box-shadow:0 8px 25px #082b6815
+}
+.payment h3{color:#082b68;font-size:25px}
+.payment p{color:#617089;margin:15px}
+.gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
+max-width:1100px;
+margin:auto
+}
+.photo{
+height:190px;
+border-radius:15px;
+background:linear-gradient(135deg,#dff6ff,#dce9ff);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:45px;
+text-align:center;
+color:#082b68
+}
+.news{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:1100px;
+margin:auto
+}
+.news article{
+background:white;
+padding:25px;
+border-radius:15px;
+border:1px solid #d9e8f5
+}
+.news h3{color:#082b68;margin:10px 0}
+.news p{color:#617089}
+.contact{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+max-width:1100px;
+margin:auto
+}
+.contact-box{
+background:white;
+padding:30px;
+border-radius:18px;
+border:1px solid #d9e8f5
+}
+.contact-box h3{color:#082b68;margin-bottom:15px}
+.contact-box p{margin:15px 0}
+.contact-box a{color:#0b55b7}
+.map{
+background:#eef8ff;
+padding:40px;
+text-align:center;
+border-radius:18px
+}
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+color:white;
+width:58px;
+height:58px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+box-shadow:0 5px 15px #0004;
+z-index:999
+}
+footer{
+background:#061d49;
+color:white;
+text-align:center;
+padding:40px 7%
+}
+footer h3{margin-bottom:8px}
+footer p{color:#bdd5f5}
+@media(max-width:800px){
+nav{display:block;text-align:center}
+nav a{display:inline-block;margin:8px 5px}
+.cards,.gallery,.news,.contact{grid-template-columns:1fr}
+.hero{padding:65px 6%}
+section{padding:60px 6%}
+.admission{padding:30px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="top">
+📍 26 Azihen Street, Agbor, Delta State, Nigeria
+</div>
+
+<nav>
+<div class="logo-text">
+GREAT <span>DIVINELOVE</span>
+</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#academics">Academics</a>
+<a href="#admission">Admissions</a>
+<a href="#payment">Payment</a>
+<a href="#gallery">Gallery</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+
+<section id="home" class="hero">
+
+<p style="color:#0b55b7;font-weight:bold;letter-spacing:2px">
+WELCOME TO GREAT DIVINELOVE
+</p>
+
+<h1>
+Building Great Minds,<br>
+<span>Shaping Bright Futures.</span>
+</h1>
+
+<p>
+Great DivineLove Nursery, Primary and Secondary School
+is committed to nurturing children through quality education,
+good character, creativity and purposeful learning.
+</p>
+
+<div class="buttons">
+<a class="btn blue" href="#admission">Apply for Admission</a>
+<a class="btn white" href="#contact">Contact Us</a>
+</div>
+
+</section>
+
+
+<section id="about">
+
+<div class="title">
+<small>ABOUT OUR SCHOOL</small>
+<h2>Welcome to Great DivineLove</h2>
+</div>
+
+<div class="about">
+
+<p>
+Great DivineLove Nursery, Primary and Secondary School is a
+vision-driven school established with a deep sense of purpose
+and a passion for raising children who are academically sound,
+morally grounded, confident and prepared for the future.
+</p>
+
+<p>
+We believe that every child carries a unique gift. Our aim is
+to provide a caring and stimulating environment where every
+learner can discover, develop and confidently use their gifts.
+</p>
+
+<p>
+Our foundation is built on wisdom, excellence, discipline,
+respect, creativity and love for every child.
+</p>
+
+<h3 style="color:#0b55b7;margin-top:25px">
+“WISDOM FROM GOD”
+</h3>
+
+</div>
+</section>
+
+
+<section id="academics" class="alt">
+
+<div class="title">
+<small>ACADEMICS</small>
+<h2>Learning for Every Stage</h2>
+</div>
+
+<div class="cards">
+
+<div class="card level">
+<div class="icon">🧸</div>
+<h3>Nursery</h3>
+<p>
+A warm and caring foundation where young learners discover
+language, numbers, creativity, confidence and social skills.
+</p>
+<a href="#nursery">Learn More →</a>
+</div>
+
+<div class="card level">
+<div class="icon">📚</div>
+<h3>Primary</h3>
+<p>
+Strong foundations in literacy, numeracy, science, technology,
+creativity and character development.
+</p>
+<a href="#primary">Learn More →</a>
+</div>
+
+<div class="card level">
+<div class="icon">🎓</div>
+<h3>Secondary</h3>
+<p>
+Focused learning that prepares students for examinations,
+higher education, careers and responsible adulthood.
+</p>
+<a href="#secondary">Learn More →</a>
+</div>
+
+</div>
+</section>
+
+
+<section id="nursery">
+
+<div class="title">
+<small>NURSERY</small>
+<h2>Growing Through Discovery</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌱 Early Learning</h3>
+<p>Children develop early literacy, numeracy and communication skills.</p>
+</div>
+
+<div class="card">
+<h3>🎨 Creativity</h3>
+<p>Creative activities encourage imagination, confidence and expression.</p>
+</div>
+
+<div class="card">
+<h3>❤️ Character</h3>
+<p>We encourage kindness, respect, good manners and positive relationships.</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="primary" class="alt">
+
+<div class="title">
+<small>PRIMARY</small>
+<h2>Building Strong Foundations</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📖 Academic Skills</h3>
+<p>Strong reading, writing, mathematics and communication skills.</p>
+</div>
+
+<div class="card">
+<h3>🔬 Discovery</h3>
+<p>Science, projects, practical activities and problem-solving.</p>
+</div>
+
+<div class="card">
+<h3>💡 Innovation</h3>
+<p>We encourage children to think, create and explore new ideas.</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="secondary">
+
+<div class="title">
+<small>SECONDARY</small>
+<h2>Preparing Students for Tomorrow</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🎓 Academic Excellence</h3>
+<p>Focused learning and preparation for examinations and further education.</p>
+</div>
+
+<div class="card">
+<h3>🚀 Future Preparation</h3>
+<p>Students are encouraged to discover their strengths and future goals.</p>
+</div>
+
+<div class="card">
+<h3>⭐ Leadership</h3>
+<p>We develop responsibility, confidence, discipline and leadership skills.</p>
+</div>
+
+</div>
+</section>
+
+
+<section id="staff" class="alt">
+
+<div class="title">
+<small>OUR PEOPLE</small>
+<h2>Teachers & Staff</h2>
+<p>
+Our dedicated staff members help create a supportive environment
+for learning and personal development.
+</p>
+</div>
+
+<div class="card" style="max-width:700px;margin:auto;text-align:center">
+<div class="icon">👩‍🏫</div>
+<h3>Meet Our Teachers</h3>
+<p>
+Staff photographs, names, positions and profiles will be added here.
+</p>
+</div>
+
+</section>
+
+
+<section id="admission">
+
+<div class="admission">
+
+<h2>Admissions Are Open</h2>
+
+<p>
+Give your child a strong educational foundation at
+Great DivineLove Nursery, Primary and Secondary School.
+Contact us for admission requirements and available classes.
+</p>
+
+<div class="buttons">
+
+<a class="btn white" href="admission-form.html">
+📥 Download Admission Form
+</a>
+
+<a class="btn outline" href="#contact">
+Contact the School
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="payment" class="alt">
+
+<div class="title">
+<small>SCHOOL FEES</small>
+<h2>School Fee Payment</h2>
+</div>
+
+<div class="payment">
+
+<div class="icon">💳</div>
+
+<h3>Pay School Fees Online</h3>
+
+<p>
+Our secure online school-fee payment option will be available
+here. Parents will be able to make payments conveniently
+through the school's approved payment platform.
+</p>
+
+<a class="btn blue" href="#">
+Payment Link Coming Soon
+</a>
+
+</div>
+
+</section>
+
+
+<section id="gallery">
+
+<div class="title">
+<small>GALLERY</small>
+<h2>Life at Great DivineLove</h2>
+</div>
+
+<div class="gallery">
+
+<div class="photo">📸<br>School Activities</div>
+<div class="photo">🎨<br>Creative Learning</div>
+<div class="photo">🔬<br>Science & Projects</div>
+<div class="photo">🎤<br>Presentations</div>
+<div class="photo">🏆<br>Achievements</div>
+<div class="photo">🎉<br>School Events</div>
+
+</div>
+
+</section>
+
+
+<section id="news" class="alt">
+
+<div class="title">
+<small>NEWS</small>
+<h2>News & Announcements</h2>
+</div>
+
+<div class="news">
+
+<article>
+<h3>Welcome to Our Website</h3>
+<p>
+Parents and visitors can now access important school
+information online.
+</p>
+</article>
+
+<article>
+<h3>Admissions</h3>
+<p>
+Admission information and application details will be
+published here.
+</p>
+</article>
+
+<article>
+<h3>School Activities</h3>
+<p>
+School programmes, achievements and important announcements
+will appear here.
+</p>
+</article>
+
+</div>
+</section>
+
+
+<section id="events">
+
+<div class="title">
+<small>SCHOOL CALENDAR</small>
+<h2>Events & Important Dates</h2>
+</div>
+
+<div class="card" style="max-width:800px;margin:auto;text-align:center">
+
+<div class="icon">📅</div>
+
+<h3>School Events</h3>
+
+<p>
+Term dates, examinations, PTA meetings, special programmes
+and other important school activities will be published here.
+</p>
+
+</div>
+
+</section>
+
+
+<section id="parents" class="alt">
+
+<div class="title">
+<small>FOR PARENTS</small>
+<h2>Parent Information</h2>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📄 Documents</h3>
+<p>
+Admission forms, notices and other useful school documents
+will be available here.
+</p>
+</div>
+
+<div class="card">
+<h3>📌 School Information</h3>
+<p>
+Important information about school routines, uniforms,
+attendance and communication will be provided here.
+</p>
+</div>
+
+<div class="card">
+<h3>💬 Stay Connected</h3>
+<p>
+Parents can contact the school through our official
+communication channels.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contact">
+
+<div class="title">
+<small>CONTACT US</small>
+<h2>We Would Love to Hear From You</h2>
+</div>
+
+<div class="contact">
+
+<div class="contact-box">
+
+<h3>📍 School Address</h3>
+
+<p>
+26 Azihen Street,<br>
+Agbor, Delta State,<br>
+Nigeria
+</p>
+
+<h3>✉️ Email</h3>
+
+<p>
+<a href="mailto:greatdivinelovenps@gmail.com">
+greatdivinelovenps@gmail.com
+</a>
+</p>
+
+<h3>📞 Phone</h3>
+
+<p>Phone number coming soon</p>
+
+<h3>💬 WhatsApp</h3>
+
+<p>WhatsApp number coming soon</p>
+
+</div>
+
+
+<div class="map">
+
+<div style="font-size:60px">📍</div>
+
+<h3>Find Our School</h3>
+
+<p>
+26 Azihen Street, Agbor, Delta State
+</p>
+
+<br>
+
+<a class="btn blue"
+target="_blank"
+href="https://www.google.com/maps/search/?api=1&query=26+Azihen+Street+Agbor+Delta+State+Nigeria">
+Open Google Maps
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<a class="whatsapp" href="#contact">💬</a>
+
+
+<footer>
+
+<h3>
+GREAT DIVINELOVE NURSERY, PRIMARY & SECONDARY SCHOOL
+</h3>
+
+<p><em>Wisdom from God</em></p>
+
+<p style="margin-top:15px">
+© 2026 Great DivineLove School. All Rights Reserved.
+</p>
+
+</footer>
+
+</body>
+  </html>
